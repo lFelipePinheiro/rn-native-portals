@@ -22,6 +22,10 @@ class PortalRegistry {
   func get(name: NSString) -> PortalDestination? {
     return destinations[name]
   }
+
+  func remove(destination: PortalDestination) {
+    destinations[destination.name] = nil
+  }
   
   // Sources part
   func put(origin: PortalOrigin) {

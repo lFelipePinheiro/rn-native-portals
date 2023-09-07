@@ -21,6 +21,9 @@ class PortalDestination: UIView, PortalView {
   func restitute()  {
     guard let lastOrigin = self.lastOrigin else { return }
     moveTo(destination: lastOrigin)
+    if let lastDestination = lastOrigin.lastDestination {
+      registry.remove(destination: lastDestination)
+    }
     lastOrigin.lastDestination = nil
     self.lastOrigin = nil
   }
