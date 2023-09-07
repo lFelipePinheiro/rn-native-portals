@@ -16,10 +16,6 @@ class PortalOrigin: UIView, PortalView {
       move()
     }
   }
-  
-  override func didAddSubview(_ subview: UIView) {
-    self.move()
-  }
 
   func restituteIfNeeded(destinationName: NSString) {
     if (destinationName == "" && lastDestination?.lastOrigin == self) {
