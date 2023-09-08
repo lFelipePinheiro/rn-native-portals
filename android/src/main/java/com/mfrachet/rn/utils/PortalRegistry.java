@@ -25,6 +25,10 @@ public class PortalRegistry {
         return mDestinations.get(name);
     }
 
+    public void removeDestination(PortalDestinationGroup destination) {
+      mDestinations.remove(destination.getName());
+    }
+
     // Origins
     public void putOrigin(PortalOriginGroup origin) {
         mOrigins.put(origin.getDestination(), origin);

@@ -26,6 +26,10 @@ public class PortalDestinationGroup extends PortalViewGroup {
     public void restitute() {
         if (mLastOrigin != null) {
             moveTo(mLastOrigin);
+            PortalDestinationGroup lastDestination = mLastOrigin.getLastDestination();
+            if (lastDestination != null) {
+              mRegistry.removeDestination(lastDestination);
+            }
             mLastOrigin.setLastDestination(null);
             mLastOrigin = null;
         }

@@ -41,6 +41,10 @@ public class PortalOriginGroup extends PortalViewGroup {
         return mDestination;
     }
 
+    public PortalDestinationGroup getLastDestination() {
+      return mLastDestination;
+    }
+
     public void setDestination(String newDestination) {
         // WillSet on iOS
         restituteIfNeeded(newDestination);
